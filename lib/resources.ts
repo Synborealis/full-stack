@@ -1,11 +1,7 @@
 export type Resource = {​
-
 id: string​
-
 name: string​
-
 type: 'room' | 'equipment' | 'sport'​
-
 capacity: number​
 
 }​
@@ -23,3 +19,7 @@ export const resources: Resource[] = [​
 { id: 'court', name: 'Sports Hall', type: 'sport', capacity: 30 },​
 
 ]​
+
+export function getResource(id: string) {
+  return resources.find((resource) => resource.id === id)
+}
